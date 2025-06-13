@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XCOIN PromptPay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="assets/LOGOXCOIN.png" class="logo" alt="XCOIN Logo" />
+    <h1>เติมเงิน XCOIN ด้วย PromptPay</h1>
+
+    <div class="input-group">
+      <label>จำนวนเงิน (THB):</label>
+      <input type="number" id="bahtInput" value="100" />
+    </div>
+
+    <div class="input-group">
+      <label>หรือกรอกจำนวนคอยน์ (B COIN):</label>
+      <input type="number" id="coinInput" />
+    </div>
+
+    <div class="qr-section">
+      <button onclick="showQR()">สร้าง QR พร้อมเพย์</button>
+      <div id="popup" class="popup hidden">
+        <span id="closePopup" onclick="closePopup()">×</span>
+        <p>ยอดที่ต้องชำระ: <span id="popupAmount">100</span> บาท</p>
+        <img id="qrImage" src="" alt="QR พร้อมเพย์" />
+        <button onclick="downloadQR()">ดาวน์โหลด QR</button>
+      </div>
+    </div>
+
+    <div class="bank-info">
+      <p><img src="assets/PromptPay.png" width="24"> พร้อมเพย์: <strong id="ppNumber">0105562033673</strong>
+        <button onclick="copyText('0105562033673')">COPY</button></p>
+      <p><img src="assets/SCB.png" width="24"> ธ.ไทยพาณิชย์: <strong>0932502877</strong>
+        <button onclick="copyText('0932502877')">COPY</button></p>
+    </div>
+
+    <a class="credit-btn" href="https://bizbuddy.co.th/xcoin" target="_blank">ตัดบัตรเครดิต</a>
+
+    <footer>
+      <a href="https://lin.ee/du1FWm9" target="_blank">เพิ่มเพื่อน LINE OA</a><br>
+      POWER RED BY RED X
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
